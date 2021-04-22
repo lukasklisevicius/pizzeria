@@ -1,0 +1,75 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- link to stylesheet -->
+        <link rel="stylesheet" href="style.css">
+        <title>Pizzeria</title>
+    </head>
+
+    <body>
+        <h1>Pizzeria</h1>
+        <!-- add to menu form -->
+        <div class="add-to-menu">
+
+
+            <form id="add-pizza-form">
+                <header>
+                    <h3>Add pizza to menu</h3>
+                </header>
+
+                <div>
+                    <label for="name">name:</label>
+                    <input type="text" id="name" maxlength="30">
+                </div>
+                <div>
+                    <label for="price">price:</label>
+                    <input type="number" id="price" min="0">
+                </div>
+                <div>
+                    <label for="heat">heat:</label>
+                    <input type="number" id="heat" min="0" max="3">
+                </div>
+                <div>
+                    <label for="toppings">toppings:</label>
+                    <input type="text" id="toppings">
+                </div>
+                <div class="pictures">
+                    <img class="picture" src="https://cdn.pixabay.com/photo/2017/09/30/15/10/plate-2802332_960_720.jpg"
+                        alt="" srcset="">
+                    <img class="picture"
+                        src="https://cdn.pixabay.com/photo/2016/03/05/21/46/american-1239081_960_720.jpg" alt=""
+                        srcset="">
+                    <img class="picture" src="https://cdn.pixabay.com/photo/2017/01/22/19/12/pizza-2000595_960_720.jpg"
+                        alt="" srcset="">
+
+                </div>
+                <input id="add-pizza-btn" value="submit" type="submit">
+            </form>
+        </div>
+        <div class="header">
+            <h2>Pizza menu</h2>
+
+            <select id="sort-by">
+                <option class="sort" value="name" onclick="getSortValue()">Name</option>
+                <option class="sort" value="price" onclick="getSortValue()">Price</option>
+                <option class="sort" value="heat" onclick="getSortValue()">Heat</option>
+            </select>
+            <button id="sort">Sort</button>
+
+        </div>
+
+        <div class="container">
+
+            <!-- menu items goes here -->
+
+
+        </div>
+        <!-- javascript -->
+        <script src="script.js"></script>
+    </body>
+
+    </html>
